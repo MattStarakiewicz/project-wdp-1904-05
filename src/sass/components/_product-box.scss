@@ -79,6 +79,25 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    .price {
+      .price-old {
+        display: inline-block;
+        position: relative;
+        font-size: 13px;
+        line-height: 22px;
+        font-weight: 300;
+        color: darkgray;
+
+        &:before {
+          position: absolute;
+          content: "";
+          border-bottom: 1px solid $text-color;
+          width: 100%;
+          height: 50%;
+        }
+      }
+    }
   }
 
   &:hover {
