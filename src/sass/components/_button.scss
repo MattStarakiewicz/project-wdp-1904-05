@@ -33,4 +33,10 @@
     background-color: #2a2a2a;
     color: #ffffff;
   }
+
+  &.active {
+    background-color: $primary;
+    color: #ffffff;
+    border-color: $primary;
+  }
 }
