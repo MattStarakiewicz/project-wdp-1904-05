@@ -34,3 +34,11 @@
     color: #ffffff;
   }
 }
+
+.btn-main-brands-switch {
+  @extend .btn-main;
+  height: 90px;
+  line-height: 70px;
+  margin: 20px auto;
+  padding: 10px 15px;
+}
