@@ -222,3 +222,37 @@ header {
     }
   }
 }
+
+@media (max-width: 533px) {
+  header .top-bar .text-left {
+    flex-grow: 1.5;
+    ul li {
+      margin-right: 0.8em;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .hide-for-mobile {
+    display: none;
+  }
+
+  header {
+    .company-claim {
+      align-content: flex-start;
+
+      .phone-number {
+        order: 1;
+
+        p {
+          font-size: 14px;
+          text-align: right;
+        }
+      }
+
+      .cart {
+        transform: translateY(-10px);
+      }
+    }
+  }
+}
