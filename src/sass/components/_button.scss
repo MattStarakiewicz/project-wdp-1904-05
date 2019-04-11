@@ -1,6 +1,6 @@
 .btn-main {
-  background-color: #2a2a2a;
-  color: #fff;
+  background-color: $footer-claim-bg;
+  color: $text-dark-bg;
   font-size: 16px;
   line-height: 24px;
   font-weight: 600;
@@ -8,7 +8,7 @@
   @extend %background-animation-time;
 
   &:not(.no-hover):hover {
-    color: #fff !important;
+    color: $text-dark-bg !important;
     background-color: $primary;
     text-decoration: none;
   }
@@ -26,20 +26,20 @@
 .btn-outline {
   display: inline-block;
   padding: 5px 10px;
-  border: 1px solid #2a2a2a;
-  color: #2a2a2a;
+  border: 1px solid $footer-claim-bg;
+  color: $footer-claim-bg;
   font-size: 13px;
   line-height: 22px;
   @extend %background-animation-time;
 
   &:hover {
-    background-color: #2a2a2a;
-    color: #fff;
+    background-color: $footer-claim-bg;
+    color: $text-dark-bg;
   }
 
   &.active {
     background-color: $primary;
-    color: #fff;
+    color: $text-dark-bg;
     border-color: $primary;
   }
 }
