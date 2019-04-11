@@ -9,3 +9,15 @@ $primary: #d58e32;
 $text-color: #2a2a2a;
 
 $form-border-color: #292929;
+
+// Hover state animation - set value in milliseconds
+
+//for buttons background
+%background-animation-time {
+  transition-duration: 250ms !important;
+}
+
+//for texts and icons
+%text-animation-time {
+  transition-duration: 250ms !important;
+}
