@@ -1,0 +1,209 @@
+.hot-deals {
+  padding: 8px 25px;
+  background-color: $footer-claim-bg;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  h3 {
+    margin: 0;
+    text-transform: uppercase;
+    color: $secondary;
+    font-size: 20px;
+    line-height: 38px;
+  }
+
+  .dots {
+    padding: 0;
+    ul {
+      margin: 0;
+      padding: 0 5px 0 0;
+      list-style: none;
+      background-color: $footer-claim-bg;
+      li {
+        display: inline-block;
+        margin-left: 0.5rem;
+        a {
+          display: block;
+          width: 13px;
+          height: 13px;
+          border-radius: 6px;
+          background-color: #e1e1e1;
+          @extend %text-animation-time;
+          &.active,
+          &:hover {
+            background-color: $primary;
+          }
+        }
+      }
+    }
+  }
+}
+
+.product-box {
+  margin-bottom: 0;
+  .photo {
+    padding: 50% 10px 0 10px;
+    transition-duration: 0s !important;
+    .promo-timer {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      visibility: hidden;
+      .promo-circle {
+        width: 65px;
+        height: 65px;
+        background-color: $footer-claim-bg;
+        border-radius: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        margin: 0 3px 10px 3px;
+        .promo-number {
+          font-size: 22px;
+          line-height: 22px;
+          font-weight: 500;
+          color: $secondary;
+          margin: 0;
+        }
+
+        .promo-interval {
+          text-transform: uppercase;
+          font-size: 13px;
+          color: $secondary;
+          margin: 0;
+        }
+      }
+    }
+
+    .btn-promoted {
+      position: absolute;
+      top: 38%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      visibility: hidden;
+      background-color: #2a2a2a;
+      color: $secondary;
+      font-size: 13px;
+      line-height: 24px;
+      padding: 5px 10px;
+      font-weight: 400;
+      &:not(.no-hover):hover {
+        color: $secondary !important;
+        background-color: $primary;
+        text-decoration: none;
+      }
+    }
+
+    &:hover {
+      .btn-promoted {
+        visibility: visible;
+        @extend %background-animation-time;
+      }
+
+      .promo-timer {
+        visibility: visible;
+      }
+    }
+  }
+
+  .promoted-price {
+    display: flex;
+    flex-direction: row;
+    .discount {
+      color: #a5a5a5;
+      font-size: 13px;
+      font-weight: 300;
+      padding: 7px 10px;
+      text-decoration: line-through $footer-claim-bg;
+    }
+  }
+
+  &:hover {
+    .actions {
+      .promoted-price {
+        .btn-main-small {
+          background-color: $primary;
+        }
+      }
+    }
+  }
+}
+
+.promo-banner {
+  background-color: #ccc;
+  background-size: contain;
+  padding: 58% 0 0 0;
+  overflow: hidden;
+  position: relative;
+
+  .tinted {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    position: absolute;
+    top: 25%;
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    padding: 55px 0;
+    h1,
+    h3 {
+      text-transform: uppercase;
+      color: $secondary;
+      margin: 0;
+    }
+
+    h1 {
+      font-weight: 300;
+      font-size: 58px;
+      span {
+        font-weight: 700;
+      }
+    }
+
+    h3 {
+      font-weight: 300;
+      font-size: 25px;
+    }
+
+    .btn-banner {
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      padding: 0 30px;
+      transform: translate(-50%, -50%);
+      text-transform: uppercase;
+      border-radius: 4px;
+      color: $footer-claim-bg;
+      background-color: $secondary;
+      max-width: 200px;
+      font-weight: 600;
+      line-height: 55px;
+      text-decoration: none;
+      @extend %background-animation-time;
+
+      &:hover {
+        background-color: $primary;
+        color: $secondary;
+      }
+    }
+  }
+  .direction-arrows {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    a {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      i {
+        font-size: 13px;
+        line-height: 24px;
+      }
+    }
+  }
+}
