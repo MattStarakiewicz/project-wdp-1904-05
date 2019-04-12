@@ -20,6 +20,7 @@
   line-height: 24px;
   padding: 5px 10px;
   font-weight: 400;
+  display: inline-block;
 }
 
 .btn-outline {
@@ -35,4 +36,12 @@
     background-color: #2a2a2a;
     color: #ffffff;
   }
+}
+
+.btn-main-brands-switch {
+  @extend .btn-main;
+  height: 90px;
+  line-height: 70px;
+  margin: 20px auto;
+  padding: 10px 15px;
 }

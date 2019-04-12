@@ -93,15 +93,15 @@ header {
           height: 27px;
           border-radius: 14px;
           background-color: $header-bg;
-          display: flex;
-          align-items: center;
-          justify-content: center;
+          line-height: 27px;
+          text-align: center;
           font-size: 14px;
           color: rgb(224, 227, 237);
           position: absolute;
           top: 50%;
           right: 0;
           transform: translate(50%, -50%);
+          padding: 0 5px;
         }
 
         &:hover {
@@ -221,6 +221,40 @@ header {
           background-color: transparent;
           outline: none;
         }
+      }
+    }
+  }
+}
+
+@media (max-width: 533px) {
+  header .top-bar .text-left {
+    flex-grow: 1.5;
+    ul li {
+      margin-right: 0.8em;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .hide-for-mobile {
+    display: none;
+  }
+
+  header {
+    .company-claim {
+      align-content: flex-start;
+
+      .phone-number {
+        order: 1;
+
+        p {
+          font-size: 14px;
+          text-align: right;
+        }
+      }
+
+      .cart {
+        transform: translateY(-10px);
       }
     }
   }

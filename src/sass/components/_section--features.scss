@@ -1,3 +1,11 @@
 .section--features {
   padding: 5rem 0;
+  @media (max-width: 1024px) {
+    .col {
+      margin-bottom: 40px;
+      &:nth-child(2) {
+        break-after: always !important;
+      }
+    }
+  }
 }
