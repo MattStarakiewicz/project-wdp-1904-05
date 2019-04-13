@@ -1,0 +1,13 @@
+.section--products {
+  #new-furnitures-products {
+    display: block;
+
+    .tns-item {
+      cursor: grab;
+
+      &:active {
+        cursor: grabbing;
+      }
+    }
+  }
+}
