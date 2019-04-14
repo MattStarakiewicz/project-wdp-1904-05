@@ -1,0 +1,27 @@
+.section--brands {
+  border-top: 1px solid darkgray;
+  border-bottom: 1px solid darkgray;
+
+  .brands-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: flex-start;
+
+    .logo-container {
+      border: 1px solid darkgray;
+      flex: 0 1 auto;
+      margin: 20px auto;
+      width: 140px;
+      height: 90px;
+      text-align: center;
+      line-height: 83px;
+
+      img {
+        margin: 10px;
+      }
+    }
+  }
+}
