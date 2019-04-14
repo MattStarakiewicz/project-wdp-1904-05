@@ -8,7 +8,7 @@
   h3 {
     margin: 0;
     text-transform: uppercase;
-    color: $secondary;
+    color: $text-dark-bg;
     font-size: 20px;
     line-height: 38px;
   }
@@ -151,7 +151,7 @@
     h1,
     h3 {
       text-transform: uppercase;
-      color: $secondary;
+      color: $text-dark-bg;
       margin: 0;
     }
 
@@ -177,7 +177,7 @@
       text-transform: uppercase;
       border-radius: 4px;
       color: $footer-claim-bg;
-      background-color: $secondary;
+      background-color: $text-dark-bg;
       max-width: 200px;
       font-weight: 600;
       line-height: 55px;
@@ -186,7 +186,7 @@
 
       &:hover {
         background-color: $primary;
-        color: $secondary;
+        color: $text-dark-bg;
       }
     }
   }
