@@ -82,8 +82,8 @@ footer {
 
   @media (min-width: 541px) and (max-width: 1024px) {
     .footer-menu {
-      .col:nth-child(2) {
-        break-after: always;
+      .col {
+        flex: 1 1 50%;
       }
     }
   }
