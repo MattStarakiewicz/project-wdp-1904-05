@@ -5,7 +5,8 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  h3 {
+  
+  .hot-deals-heading {
     margin: 0;
     text-transform: uppercase;
     color: $text-dark-bg;
@@ -30,7 +31,8 @@
           border-radius: 6px;
           background-color: #e1e1e1;
           @extend %text-animation-time;
-          &.active,
+          
+          &.active,          
           &:hover {
             background-color: $primary;
           }
@@ -65,14 +67,14 @@
           font-size: 22px;
           line-height: 22px;
           font-weight: 500;
-          color: $secondary;
+          color: $text-dark-bg;
           margin: 0;
         }
 
         .promo-interval {
           text-transform: uppercase;
           font-size: 13px;
-          color: $secondary;
+          color: $text-dark-bg;
           margin: 0;
         }
       }
@@ -85,13 +87,13 @@
       transform: translate(-50%, -50%);
       visibility: hidden;
       background-color: #2a2a2a;
-      color: $secondary;
+      color: $text-dark-bg;
       font-size: 13px;
       line-height: 24px;
       padding: 5px 10px;
       font-weight: 400;
       &:not(.no-hover):hover {
-        color: $secondary !important;
+        color: $text-dark-bg !important;
         background-color: $primary;
         text-decoration: none;
       }
@@ -138,7 +140,6 @@
   padding: 58% 0 0 0;
   overflow: hidden;
   position: relative;
-
   .tinted {
     display: flex;
     flex-direction: column;
@@ -148,14 +149,14 @@
     background-color: rgba(0, 0, 0, 0.3);
     width: 100%;
     padding: 55px 0;
-    h1,
-    h3 {
+    .promo-banner-title,
+    .promo-banner-subtitle {
       text-transform: uppercase;
       color: $text-dark-bg;
       margin: 0;
     }
 
-    h1 {
+    .promo-banner-title {
       font-weight: 300;
       font-size: 58px;
       span {
@@ -163,7 +164,7 @@
       }
     }
 
-    h3 {
+    .promo-banner-subtitle {
       font-weight: 300;
       font-size: 25px;
     }
