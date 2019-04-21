@@ -1,3 +1,9 @@
+.section-promoted {
+  a {
+    cursor: pointer;
+  }
+}
+
 .hot-deals {
   padding: 8px 25px;
   background-color: $footer-claim-bg;
@@ -5,7 +11,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  
+
   .hot-deals-heading {
     margin: 0;
     text-transform: uppercase;
@@ -24,18 +30,19 @@
       li {
         display: inline-block;
         margin-left: 0.5rem;
-        a {
-          display: block;
-          width: 13px;
-          height: 13px;
-          border-radius: 6px;
-          background-color: #e1e1e1;
-          @extend %text-animation-time;
-          
-          &.active,          
-          &:hover {
-            background-color: $primary;
-          }
+        width: 13px;
+        height: 13px;
+        border-radius: 6px;
+        background-color: #e1e1e1;
+        cursor: pointer;
+        @extend %text-animation-time;
+
+        &:hover {
+          background-color: $primary;
+        }
+
+        &.tns-nav-active {
+          background-color: $primary;
         }
       }
     }
@@ -47,6 +54,23 @@
   .photo {
     padding: 50% 10px 0 10px;
     transition-duration: 0s !important;
+    position: relative;
+
+    .app-hot-deals-slider {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      margin-left: -10px;
+      * {
+        width: 100%;
+        height: 100%;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+    }
+
     .promo-timer {
       display: flex;
       flex-direction: row;
@@ -63,6 +87,7 @@
         align-items: center;
         padding: 10px;
         margin: 0 3px 10px 3px;
+        z-index: 1;
         .promo-number {
           font-size: 22px;
           line-height: 22px;
