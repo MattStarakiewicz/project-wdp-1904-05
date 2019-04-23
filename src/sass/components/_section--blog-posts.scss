@@ -1,0 +1,9 @@
+.section--blog-posts {
+  @for $i from 1 through 3 {
+    .col-4:nth-child(#{$i}) {
+      .cover {
+        background-image: url("../images/pictures/b_#{$i}.jpg");
+      }
+    }
+  }
+}
