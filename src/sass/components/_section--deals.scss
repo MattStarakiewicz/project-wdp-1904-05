@@ -14,10 +14,13 @@
     background-color: #6a6a6a;
     height: 420px;
     padding: 32px;
+    background-image: url("https://images.pexels.com/photos/276583/pexels-photo-276583.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background-position: center center;
+    background-size: cover;
 
     .deal-container {
       height: 100%;
-      background-color: rgba(0, 0, 0, 0.3);
+      background-color: rgba(0, 0, 0, 0.4);
       color: $text-dark-bg;
       position: relative;
 
@@ -53,6 +56,10 @@
     height: 195px;
     padding-top: 40px;
     text-align: center;
+    background-image: url("http://www.pngmart.com/files/7/Wing-Chair-Transparent-Background.png");
+    background-repeat: no-repeat;
+    background-position: 95% center;
+    background-size: 33%;
 
     .text-wrapper {
       display: inline-block;
@@ -83,6 +90,10 @@
   .deal-right-bottom {
     background-color: #fbf3f7;
     height: 195px;
+    background-image: url("https://i.dlpng.com/static/png/329101_thumb.png");
+    background-repeat: no-repeat;
+    background-position: -20% center;
+    background-size: contain;
 
     .deal-container {
       text-align: right;
