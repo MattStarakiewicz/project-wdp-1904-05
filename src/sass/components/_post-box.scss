@@ -78,12 +78,13 @@
           }
         }
 
-      h5 {
-        color: $primary;
-        font-size: 16px;
-        line-height: 24px;
-        letter-spacing: 1px;
-        @extend %text-animation-time;
+        h5 {
+          color: $primary;
+          font-size: 16px;
+          line-height: 24px;
+          letter-spacing: 1px;
+          @include txt-ani-time;
+        }
       }
     }
   }
