@@ -45,13 +45,23 @@
     }
 
     .stars {
-      a {
+      .star {
+        cursor: pointer;
+        padding: 0;
+        outline: none;
+        background: none;
+        border: none;
         text-decoration: none;
         color: rgb(42, 42, 42);
+        @extend %background-animation-time;
         @extend .far;
         @extend .fa-star;
 
         &.full {
+          @extend .fas;
+        }
+        &.selected {
+          color: $primary;
           @extend .fas;
         }
       }
