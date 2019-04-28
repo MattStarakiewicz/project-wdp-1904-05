@@ -100,4 +100,37 @@
       }
     }
   }
+
+  @include mobile {
+    .heading,
+    .menu,
+    .dots {
+      flex: 0 1 100%;
+    }
+
+    .dots {
+      display: flex;
+      justify-content: center;
+      border: none;
+
+      ul {
+        padding-right: 1rem;
+
+        li {
+          margin-right: 0.5rem;
+        }
+      }
+    }
+  }
+
+  @include small-mobile {
+    .dots {
+      ul {
+        padding: 0.5rem;
+        li {
+          margin: 0 0.25rem;
+        }
+      }
+    }
+  }
 }
