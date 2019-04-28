@@ -1,5 +1,6 @@
 $tablet-width: 768px;
 $desktop-width: 1200px;
+$small-mobile-width: 360px;
 
 @mixin tablet {
   @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
@@ -9,6 +10,12 @@ $desktop-width: 1200px;
 
 @mixin mobile {
   @media (max-width: #{$tablet-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin small-mobile {
+  @media (max-width: #{$small-mobile-width}) {
     @content;
   }
 }
@@ -392,6 +399,18 @@ header {
             width: 100%;
             border-bottom: 1px solid $form-border-color;
           }
+        }
+      }
+    }
+  }
+
+  @include small-mobile {
+    .menu-bar {
+      .menu {
+        padding: 15px;
+        flex: 0 1 100%;
+        ul {
+          right: unset;
         }
       }
     }
