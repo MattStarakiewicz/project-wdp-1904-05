@@ -10,15 +10,18 @@
 
 @import "components/header";
 @import "components/footer";
-
+@import "components/feedback";
 @import "components/button";
 @import "components/feature-box";
 @import "components/panel-bar";
 @import "components/post-box";
 @import "components/product-box";
-
+@import "components/promoted";
 @import "components/section--features";
+@import "components/section--gallery";
 @import "components/section--brands";
+@import "components/section--blog-posts";
+@import "components/section--products";
 
 body {
   font-family: "Poppins", sans-serif;
