@@ -11,7 +11,7 @@
   }
 
   .deal-left {
-    background-color: #6a6a6a;
+    background-color: $deals-left-bg;
     height: 420px;
     padding: 32px;
     background-image: url("https://images.pexels.com/photos/276583/pexels-photo-276583.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
@@ -51,7 +51,7 @@
   }
 
   .deal-right-top {
-    background-color: #e8edf7;
+    background-color: $deals-right-top-bg;
     margin-bottom: 30px;
     height: 195px;
     padding-top: 40px;
@@ -88,7 +88,7 @@
   }
 
   .deal-right-bottom {
-    background-color: #fbf3f7;
+    background-color: $deals-right-bottom-bg;
     height: 195px;
     background-image: url("https://i.dlpng.com/static/png/329101_thumb.png");
     background-repeat: no-repeat;
@@ -114,3 +114,53 @@
     }
   }
 }
+
+@media (max-width: 767px) {
+  .deal-left {
+    margin-bottom: 30px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .deal-left {
+    .deal-container {
+      .text-wrapper {
+        h3 {
+          span {
+            font-size: 34px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .deal-left {
+    margin-bottom: 30px;
+  }
+
+  .deal-right-top {
+    .text-wrapper {
+      h3,
+      div {
+        text-shadow: 1px 1px 0 $deals-right-top-bg, -1px -1px 0 $deals-right-top-bg,
+          -1px 1px 0 $deals-right-top-bg, 1px -1px 0 $deals-right-top-bg;
+      }
+    }
+  }
+
+  .deal-right-bottom {
+    .deal-container {
+      .text-wrapper {
+        h3,
+        div {
+          text-shadow: 1px 1px 0 $deals-right-bottom-bg,
+            -1px -1px 0 $deals-right-bottom-bg, -1px 1px 0 $deals-right-bottom-bg,
+            1px -1px 0 $deals-right-bottom-bg;
+        }
+      }
+    }
+  }
+}
+
