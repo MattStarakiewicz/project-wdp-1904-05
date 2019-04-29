@@ -1,3 +1,25 @@
+$tablet-width: 768px;
+$desktop-width: 1200px;
+$small-mobile-width: 360px;
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: #{$tablet-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin small-mobile {
+  @media (max-width: #{$small-mobile-width}) {
+    @content;
+  }
+}
+
 header {
   .top-bar {
     background-color: $header-topbar-bg;
@@ -118,12 +140,23 @@ header {
     background-color: #ffffff;
 
     .container > .row {
-      height: 84px;
+      padding: 10px 0;
     }
 
     .menu {
       display: flex;
       align-self: stretch;
+      margin: -10px 0;
+
+      button {
+        display: none;
+        background-color: $primary;
+        color: #ffffff;
+        border-radius: 3px;
+        border: none;
+        padding: 5px 10px;
+        cursor: pointer;
+      }
 
       ul {
         margin: 0;
@@ -247,6 +280,10 @@ header {
               background: $primary;
               color: white;
 
+              & ~ li {
+                pointer-events: none;
+              }
+
               & > ul {
                 display: block;
 
@@ -264,12 +301,15 @@ header {
         display: flex;
         align-items: center;
         position: relative;
+        padding: 10px;
+        background: #ffffff;
 
         input {
           border: 0;
           padding-left: 10px;
           font-size: 14px;
           outline: none;
+          flex: 1;
 
           &::placeholder {
             color: $text-color;
@@ -280,6 +320,97 @@ header {
           border: 0;
           background-color: transparent;
           outline: none;
+        }
+      }
+    }
+  }
+
+  @include tablet {
+    .menu-bar {
+      .menu {
+        width: 100%;
+
+        ul {
+          margin: 0 auto;
+        }
+      }
+
+      .search {
+        order: 2;
+        text-align: center;
+
+        .search-form {
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+
+  @include mobile {
+    .menu-bar {
+      .menu {
+        margin: 0;
+        padding: 5px;
+        align-self: center;
+
+        button {
+          display: block;
+        }
+
+        ul {
+          display: none;
+          position: absolute;
+          background: #ffffff;
+          z-index: 2;
+          right: 0;
+          top: 100%;
+          box-shadow: 2px 3.464px 6px rgba(1, 2, 2, 0.2);
+          max-width: 540px;
+          width: 80vw;
+
+          li {
+            display: block;
+          }
+        }
+
+        &:hover {
+          ul {
+            display: block;
+          }
+        }
+      }
+
+      .search {
+        .search-form {
+          flex-wrap: wrap;
+          height: auto;
+
+          .category {
+            width: 100%;
+            border: none;
+            order: 2;
+
+            ul ul {
+              left: 50%;
+            }
+          }
+
+          .search-field {
+            width: 100%;
+            border-bottom: 1px solid $form-border-color;
+          }
+        }
+      }
+    }
+  }
+
+  @include small-mobile {
+    .menu-bar {
+      .menu {
+        padding: 15px;
+        flex: 0 1 100%;
+        ul {
+          right: unset;
         }
       }
     }
