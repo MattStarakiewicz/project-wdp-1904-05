@@ -73,7 +73,9 @@
       li {
         display: inline-block;
         margin-left: 0.5rem;
+        cursor: pointer;
 
+        i,
         a {
           display: block;
           width: 13px;
@@ -86,6 +88,14 @@
           &:hover {
             background-color: $primary;
           }
+        }
+
+        &.tns-nav-hidden {
+          display: none;
+        }
+
+        &.tns-nav-active i {
+          background-color: $primary;
         }
       }
     }
