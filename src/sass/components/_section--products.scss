@@ -1,4 +1,16 @@
 .section--products {
+  #new-furnitures-products {
+    display: block;
+
+    .tns-item {
+      cursor: grab;
+
+      &:active {
+        cursor: grabbing;
+      }
+    }
+  }
+
   @for $i from 1 through 8 {
     .col-3:nth-child(#{$i}) {
       .photo {
