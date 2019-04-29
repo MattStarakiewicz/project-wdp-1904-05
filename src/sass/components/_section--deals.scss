@@ -1,0 +1,116 @@
+.section--deals {
+  padding-bottom: 3rem;
+
+  h3 {
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+
+  .thin-text {
+    font-weight: 400;
+  }
+
+  .deal-left {
+    background-color: #6a6a6a;
+    height: 420px;
+    padding: 32px;
+    background-image: url("https://images.pexels.com/photos/276583/pexels-photo-276583.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background-position: center center;
+    background-size: cover;
+
+    .deal-container {
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+      color: $text-dark-bg;
+      position: relative;
+
+      .text-wrapper {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+
+        h3 {
+          font-size: 61px;
+          line-height: 1;
+
+          &::first-line {
+            font-size: 38px;
+            font-weight: 600;
+          }
+        }
+
+        .discount {
+          font-size: 44px;
+          font-weight: 600;
+          display: inline-block;
+          border: 5px solid $text-dark-bg;
+          padding: 5px 21px;
+        }
+      }
+    }
+  }
+
+  .deal-right-top {
+    background-color: #e8edf7;
+    margin-bottom: 30px;
+    height: 195px;
+    padding-top: 40px;
+    text-align: center;
+    background-image: url("http://www.pngmart.com/files/7/Wing-Chair-Transparent-Background.png");
+    background-repeat: no-repeat;
+    background-position: 95% center;
+    background-size: 33%;
+
+    .text-wrapper {
+      display: inline-block;
+      margin: auto;
+      text-align: left;
+
+      h3 {
+        font-size: 32px;
+        margin-bottom: 0;
+      }
+
+      .bottom-text {
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 18px;
+        letter-spacing: 4px;
+      }
+
+      .price {
+        font-size: 38px;
+        font-weight: 600;
+        color: $primary;
+        margin-top: 3px;
+      }
+    }
+  }
+
+  .deal-right-bottom {
+    background-color: #fbf3f7;
+    height: 195px;
+    background-image: url("https://i.dlpng.com/static/png/329101_thumb.png");
+    background-repeat: no-repeat;
+    background-position: -20% center;
+    background-size: contain;
+
+    .deal-container {
+      text-align: right;
+      padding: 25px;
+
+      .text-wrapper {
+        margin-top: 40px;
+
+        h3 {
+          color: $primary;
+          font-size: 24px;
+        }
+
+        div {
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}

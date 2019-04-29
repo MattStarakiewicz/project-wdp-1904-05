@@ -79,4 +79,40 @@ footer {
       }
     }
   }
+
+  @media (min-width: 541px) and (max-width: 1024px) {
+    .footer-menu {
+      .col {
+        flex: 1 1 50%;
+      }
+    }
+  }
+
+  @media (max-width: 540px) {
+    .footer-menu {
+      .row {
+        margin-right: auto;
+        margin-left: auto;
+        width: min-content;
+      }
+
+      .col {
+        break-after: always;
+        flex-basis: auto;
+        flex-grow: unset;
+      }
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .bottom-bar {
+      .col:first-child {
+        flex-basis: auto;
+      }
+
+      .copyright {
+        text-align: left !important;
+      }
+    }
+  }
 }
